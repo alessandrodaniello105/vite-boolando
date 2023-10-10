@@ -48,9 +48,13 @@ export default {
             
             <h2 class="product-model">{{ product.productInfo.model }}</h2>
             
-            <span class="discount price">14,99 € </span>
+            <div v-if="product.isDiscounted" >
+              <span class="discount price">{{ product.priceNew }} € </span>
             
-            <span class="original price">{{ product.price }}€</span>
+              <span class="original price">{{ product.price }}€</span>
+            </div>
+            <span v-else class="discount price">{{ product.price }}€</span>
+
             
           </div>      
         </div>

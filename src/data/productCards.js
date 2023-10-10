@@ -11,7 +11,8 @@ export default [
     isDiscounted: true,
     discountPercentage: 50,
     isEco: true,
-    price: 29.99
+    price: 29.99,
+    priceNew: 14.99
   },
 
   {
@@ -25,7 +26,8 @@ export default [
     isDiscounted: true,
     discountPercentage: 30,
     isEco: false,
-    price: 29.99
+    price: 29.99,
+    priceNew: 20.99
   },
 
   {
@@ -39,7 +41,8 @@ export default [
     isDiscounted: true,
     discountPercentage: 30,
     isEco: false,
-    price: 104.99
+    price: 184.99,
+    priceNew: 129.99
   },
 
   {
@@ -53,7 +56,8 @@ export default [
     isDiscounted: true,
     discountPercentage: 50,
     isEco: true,
-    price: 29.99
+    price: 29.99,
+    priceNew: 14.99
   },
 
   {
@@ -67,7 +71,7 @@ export default [
     isDiscounted: false,
     discountPercentage: 0,
     isEco: false,
-    price: 99.99
+    price: 99.99,
   },
 
   {
