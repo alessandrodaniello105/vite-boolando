@@ -30,7 +30,7 @@ export default {
             <img :src="product.urlB" alt="">
           </div>
           
-          <span class="heart">&hearts;</span>
+          <span @click="product.isFav = !product.isFav" :class="{'fav': product.isFav}" class="heart">&hearts;</span>
           
           <div class="img-bottom-text">
             <span v-if="product.isDiscounted" class="badge discount-percent">-{{product.discountPercentage}}&percnt;</span>

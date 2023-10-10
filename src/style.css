@@ -159,6 +159,10 @@ a:hover {
   color: red;
 }
 
+.product .heart.fav {
+  color: red;
+}
+
 .img-bottom-text {
   position: absolute;
   bottom: 40px;
