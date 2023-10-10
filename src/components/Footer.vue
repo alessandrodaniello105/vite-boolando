@@ -35,7 +35,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use '../scss/partials/_utilities.scss' as *;
 
 footer {
   height: 100px;
@@ -89,5 +88,6 @@ footer ul li {
 
 .box-social .social-icon a {
   color: white;
+  margin: 0 2px;
 }
 </style>
