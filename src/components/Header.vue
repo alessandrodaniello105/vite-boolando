@@ -69,8 +69,7 @@ header {
   padding-right: 5px;
 }
 
-.top-bar ul li,
-.bottom-bar .box-informativa ul li {
+.top-bar ul li {
   display: inline-block;
   list-style: none;
 }
