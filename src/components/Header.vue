@@ -1,6 +1,15 @@
 <script>
 export default {
-  name: 'Header'
+  name: 'Header',
+  data() {
+    return {
+      mainMenu: [
+        'Donna',
+        'Uomo',
+        'Bambini'
+      ]
+    }
+  }
 
 }
 </script>
@@ -9,21 +18,19 @@ export default {
   <header>
      
     <!-- top-bar -->
-    <div class="top-bar container d-flex">
+    <div class="top-bar container d-flex h-100">
 
       <!-- WEBSITE MENU -->
-      <div class="menu website">
+      <nav class="menu website">
         <ul>
-          <li><a href="#">Donna</a></li>
-          <li><a href="#">Uomo</a></li>
-          <li><a href="#">Bambini</a></li>
+          <li v-for="(link, index) in mainMenu" :key="index"><a href="#">{{ link }}</a></li>
         </ul>
-      </div>
+      </nav>
       <!-- /WEBSITE MENU -->
 
       <!-- LOGO -->
-      <div class="logo">
-        <a href="#"><img src="/boolean-logo.png" alt="Logo Boolean"></a>
+      <div class="logo w-50">
+        <a href="#"><img src="/boolean-logo.png" class="ht-25" alt="Logo Boolean"></a>
       </div>
       <!-- /LOGO -->
       
@@ -47,7 +54,7 @@ header {
   top: 0;
   z-index: 999;
   height: 50px;
-  width: 100%;
+  width: 100vw;
   background-color: #FF6900;
   box-shadow: 0 0 2px  black;
 }
@@ -56,13 +63,10 @@ header {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  height: 100%;
 }
 
 .top-bar ul li {
   padding-right: 5px;
-  font-weight: bold;
-  font-size: 0.9rem;
 }
 
 .top-bar ul li,
@@ -71,37 +75,16 @@ header {
   list-style: none;
 }
 
-
-
-.top-bar a:hover {
-  text-underline-offset: 5px;
-  text-decoration-thickness: 0rem;
-}
-
 .top-bar .menu {
   color: white;
   width: 25%;
   min-width: 190px;
 }
 
-.top-bar .menu.user {
-  text-align: right;
-}
+
 
 .top-bar .menu.user a i {
-  text-align: right;
-  font-size: 0.7rem;
   padding-left: 5px;
   padding-bottom: 5px;
 }
-
-.top-bar .logo {
-  text-align: center;
-  width: 50%;
-}
-
-.top-bar img {
-  height: 25px;
-}
-
 </style>
