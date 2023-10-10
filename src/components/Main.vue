@@ -33,8 +33,8 @@ export default {
           <span class="heart">&hearts;</span>
           
           <div class="img-bottom-text">
-            <span class="badge discount-percent">-50%</span>
-            <span class="badge green-choice">Sostenibilità</span>
+            <span v-if="product.isDiscounted" class="badge discount-percent">-{{product.discountPercentage}}&percnt;</span>
+            <span v-if="product.isEco" class="badge green-choice">Sostenibilità</span>
           </div>
         
         </div>
@@ -44,13 +44,13 @@ export default {
         <div class="small-col">
           <div class="text-box">
             
-            <span class="product-brand">Levi's</span>
+            <span class="product-brand">{{ product.productInfo.brand }}</span>
             
-            <h2 class="product-model">Relaxed fit tee unisex</h2>
+            <h2 class="product-model">{{ product.productInfo.model }}</h2>
             
             <span class="discount price">14,99 € </span>
             
-            <span class="original price">29,99 €</span>
+            <span class="original price">{{ product.price }}€</span>
             
           </div>      
         </div>
