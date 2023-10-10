@@ -23,7 +23,7 @@ export default {
 
       <!-- LOGO -->
       <div class="logo">
-        <a href="index-alt.html"><img src="assets/img/boolean-logo.png" alt="Logo Boolean"></a>
+        <a href="#"><img src="assets/img/boolean-logo.png" alt="Logo Boolean"></a>
       </div>
       <!-- /LOGO -->
       
