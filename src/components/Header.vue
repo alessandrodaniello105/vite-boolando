@@ -53,10 +53,10 @@ header {
   position: fixed;
   top: 0;
   z-index: 999;
-  height: 50px;
+  height: 52px;
   width: 100vw;
   background-color: #FF6900;
-  box-shadow: 0 0 2px  black;
+  box-shadow: 0 0 3px 1px lighten(black, 40%);
   .top-bar {
     justify-content: space-between;
     align-items: center;
@@ -71,7 +71,7 @@ header {
         padding-right: 5px;
       }
       &.user a i {
-        padding-left: 5px;
+        padding-left: 10px;
         padding-bottom: 5px;
       }
     }

@@ -40,54 +40,36 @@ footer {
   height: 100px;
   color: white;
   background-color: #1A1A1A;
+  .bottom-bar {
+    margin: 0 auto;
+    padding-top: 25px;
+    height: 100%;
+    .box-informativa {
+      h2 {
+        margin-bottom: 10px;
+      }
+      ul li {
+        position: relative;
+        left: -5px;
+        padding: 0 5px;
+        display: inline-block;
+        list-style: none;
+      }
+    }
+    .box-social {
+      font-weight: bold;
+      flex-direction: column;
+      align-items: center;
+      .social-icon {
+        padding-top: 10px;
+        a {
+          margin: 0 2px;
+        }
+      }
+    }
+    
+  } 
+
 }
 
-footer h2 {
-  font-size: 1.2rem;
-}
-
-footer ul {
-  font-size: 0.8rem;
-}
-
-footer ul li {
-  position: relative;
-  left: -5px;
-  padding: 0 5px;
-}
-
-.bottom-bar .box-informativa ul li {
-  display: inline-block;
-  list-style: none;
-}
-
-.bottom-bar {
-  margin: 0 auto;
-  padding-top: 25px;
-  height: 100%;
-} 
-
-.box-informativa h2 {
-  margin-bottom: 10px;
-}
-
-.box-social {
-  font-weight: bold;
-  flex-direction: column;
-  align-items: center;
-}
-
-.box-social span {
-  font-size: 0.8rem;
-}
-
-.box-social .social-icon {
-  padding-top: 10px;
-  font-size: 1.5rem;
-}
-
-.box-social .social-icon a {
-  color: white;
-  margin: 0 2px;
-}
 </style>
