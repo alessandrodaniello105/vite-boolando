@@ -1,6 +1,14 @@
 <script>
+import { footerMenu, footerSocial } from '../data/menus';
+
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  data() {
+    return {
+      footerMenu,
+      footerSocial
+    }
+  }
 
 }
 </script>
@@ -10,23 +18,29 @@ export default {
     <div class="bottom-bar container d-flex justify-between">
       
       <nav class="box-informativa">
+
         <h2>Boolando s.r.l.</h2>
+
         <ul>
-          <li><a href="#">Informazioni legali</a></li>
-          <li><a href="#">Informativa sulla privacy</a></li>
-          <li><a href="#">Diritto di recesso</a></li>
+          <li v-for="(item, index) in footerMenu" :key="index"><a href="#">{{ item.text}}</a></li>
         </ul>
+
       </nav>
       
       <div class="box-social d-flex">
+
         <span>Trovaci anche su</span>
+
         <div class="social-icon">
-          <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
-          <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-square-pinterest"></i></a>
-          <a href="#"><i class="fa-brands fa-square-youtube"></i></a>
+
+          <ul>
+            <li v-for="(item, index) in footerSocial" :key="index">
+              <a href="#"><i class="fa-brands" :class="item.class"></i></a>
+            </li>
+          </ul>
+
         </div>
+
       </div>
       
     </div>
@@ -62,6 +76,9 @@ footer {
       align-items: center;
       .social-icon {
         padding-top: 10px;
+        ul li {
+          display: inline-block;
+        }
         a {
           margin: 0 2px;
         }
