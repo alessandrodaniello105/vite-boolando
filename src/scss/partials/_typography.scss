@@ -20,7 +20,7 @@ body {
 
 .top-bar .menu.user a i {
   text-align: right;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 
 .top-bar .logo {
@@ -49,3 +49,23 @@ body {
   text-underline-offset: -40%;
   text-decoration-skip-ink: none;
 }
+
+// FOOTER
+
+footer {
+  h2 {
+    font-size: 1.2rem;
+  }
+  ul {
+    font-size: 0.8rem;
+  }
+  .box-social {
+    span {
+    font-size: 0.8rem;
+    }
+    .social-icon{
+      font-size: 1.5rem;
+    }
+  }
+  
+} 
