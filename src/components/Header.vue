@@ -48,7 +48,7 @@ export default {
   </header>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 header {
   position: fixed;
   top: 0;
@@ -57,33 +57,27 @@ header {
   width: 100vw;
   background-color: #FF6900;
   box-shadow: 0 0 2px  black;
+  .top-bar {
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    .menu {
+      color: white;
+      width: 25%;
+      min-width: 190px;
+      ul li {
+        display: inline-block;
+        list-style: none;
+        padding-right: 5px;
+      }
+      &.user a i {
+        padding-left: 5px;
+        padding-bottom: 5px;
+      }
+    }
+    
+  }
 }
 
-.top-bar {
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-}
 
-.top-bar ul li {
-  padding-right: 5px;
-}
-
-.top-bar ul li {
-  display: inline-block;
-  list-style: none;
-}
-
-.top-bar .menu {
-  color: white;
-  width: 25%;
-  min-width: 190px;
-}
-
-
-
-.top-bar .menu.user a i {
-  padding-left: 5px;
-  padding-bottom: 5px;
-}
 </style>
