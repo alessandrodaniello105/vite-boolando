@@ -1,18 +1,17 @@
 <script>
-import productCards from '../data/productCards'
-
 export default {
 name: 'ProductCard',
-data(){
-  return {
-    productCards
-  }
-}
+
+props: {
+  product: Object
+},
+
+
 }
 </script>
 
 <template>
-  <div v-for="product in productCards" :key="product.id" class="product">
+  <div class="product">
 
     <!-- IMAGE BOX -->
     <div class="big-col">

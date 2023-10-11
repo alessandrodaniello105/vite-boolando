@@ -1,11 +1,17 @@
 <script>
 
 import ProductCard from './ProductCard.vue';
+import products from '../data/productCards'
 
 export default {
   name: 'Main',
   components: {
     ProductCard
+  },
+  data() {
+    return {
+      products
+    }
   }
 
 }
@@ -17,7 +23,11 @@ export default {
     <!-- MAIN WRAPPER -->
     <div class="main-wrap d-flex container justify-between">
 
-      <ProductCard />
+      <ProductCard
+        v-for="product in products"
+        :key="product.id"
+        :product="product"
+      />
       
     </div>
     <!-- /MAIN WRAPPER -->
