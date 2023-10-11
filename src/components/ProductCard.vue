@@ -55,106 +55,72 @@ data(){
   </div>
 </template>
 
-<style>
+<style lang="scss" scoped>
+
 .product {
   width: 33%;
   max-width: 390px;
   min-width: 245px;
   margin: 20px 0;
+  /* BIG COL (IMAGE BOX) */
+  .big-col {
+    position: relative;
+    cursor: pointer;
+    img {
+      width: 100%;
+    }
+    img:last-child {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &:hover img:last-child {
+      display: block;
+    }
+
+    .heart {
+      position: absolute;
+      top: 20px; 
+      right: 0;
+      background-color: white;
+      font-size: 2rem;
+      padding: 5px 15px;
+      &:hover {
+        color: red;
+      }
+      &.fav {
+        color: red;
+      }
+    }
+
+    .img-bottom-text {
+      position: absolute;
+      bottom: 40px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: white;
+
+      .badge {
+        padding: 5px 10px;
+      }
+      .discount-percent {
+        background-color: red;
+      }
+      .green-choice {
+        background-color: green;
+      }
+    }
+  
+
+  }
+
+  .big-col,
+  .small-col {
+    width: 100%;
+  }
+
+
 }
 
-.product .big-col,
-.product .small-col {
-  width: 100%;
-}
-
-/* BIG COL (IMAGE BOX) */
-
-.big-col {
-  cursor: pointer;
-}
-
-.big-col img:last-child {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.big-col:hover img:last-child {
-  display: block;
-}
-
-.product .big-col {
-  position: relative;
-}
-
-.product img {
-  width: 100%;
-}
-
-.product .heart {
-  position: absolute;
-  top: 20px; 
-  right: 0;
-  background-color: white;
-  padding: 5px 15px;
-  font-size: 2rem;
-}
-
-.product .heart:hover {
-  color: red;
-}
-
-.product .heart.fav {
-  color: red;
-}
-
-.img-bottom-text {
-  position: absolute;
-  bottom: 40px;
-  font-size: 0.8rem;
-  font-weight: bold;
-  color: white;
-}
-
-.img-bottom-text .badge {
-  padding: 5px 10px;
-}
-
-.img-bottom-text .discount-percent {
-  background-color: red;
-}
-
-.img-bottom-text .green-choice {
-  background-color: green;
-}
-
-/* SMALL COL (TEXT BOX) */
-
-.text-box span:first-child {
-  font-size: 0.9rem;
-}
-
-.text-box h2 {
-  text-transform: uppercase;
-  font-size: 1rem;
-}
-
-.product-brand,
-.discount.price,
-.original.price {
-  font-size: 0.9rem;
-}
-
-.discount.price {
-  color: red;
-  font-weight: bold;
-}
-
-.original.price {
-  text-decoration: underline;
-  text-underline-offset: -40%;
-  text-decoration-skip-ink: none;
-}
 </style>
