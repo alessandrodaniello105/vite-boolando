@@ -12,7 +12,7 @@ data(){
 </script>
 
 <template>
-  <div v-for="(product, index) in productCards" :key="index" class="product">
+  <div v-for="product in productCards" :key="product.id" class="product">
 
     <!-- IMAGE BOX -->
     <div class="big-col">
