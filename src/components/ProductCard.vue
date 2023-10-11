@@ -115,6 +115,7 @@ created() {
 
       .badge {
         padding: 5px 10px;
+        margin-right: 5px;
       }
       .discount-percent {
         background-color: red;
