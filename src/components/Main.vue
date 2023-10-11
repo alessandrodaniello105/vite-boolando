@@ -7,11 +7,6 @@ export default {
   components: {
     ProductCard
   }
-  // data() {
-  //   return {
-  //     productCards
-  //   }
-  // }
 
 }
 </script>
@@ -23,8 +18,6 @@ export default {
     <div class="main-wrap d-flex container justify-between">
 
       <ProductCard />
-        
-        
       
     </div>
     <!-- /MAIN WRAPPER -->
@@ -33,14 +26,12 @@ export default {
 </template>
 
 <style scoped>
+
 .main-wrap {
   flex-wrap: wrap;
   padding-top: 60px;
   margin: 40px auto;
   width: 98%;
 }
-  
-  /* PRODUCT */
-
 
 </style>
