@@ -6,6 +6,19 @@ props: {
   product: Object
 },
 
+computed: {
+  formattedPrice() {
+    return `${this.product.price} &euro;`
+  },
+
+  formattedPriceNew() {
+    return `${this.product.priceNew} &euro; &MediumSpace;`
+  }
+},
+
+created() {
+  console.log(this.formattedPrice)
+}
 
 }
 </script>
@@ -40,11 +53,11 @@ props: {
         <h2 class="product-model">{{ product.productInfo.model }}</h2>
         
         <div v-if="product.isDiscounted" >
-          <span class="discount price">{{ product.priceNew }} € </span>
+          <span class="discount price" v-html="formattedPriceNew"></span>
         
-          <span class="original price">{{ product.price }}€</span>
+          <span class="original price" v-html="formattedPrice"> </span>
         </div>
-        <span v-else class="discount price">{{ product.price }}€</span>
+        <span v-else class="discount price" v-html="formattedPrice"> </span>
 
         
       </div>      
