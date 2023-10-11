@@ -1,13 +1,14 @@
 <script>
+import { headerNav, headerMenu } from '../data/menus';
+
 export default {
+
   name: 'Header',
+
   data() {
     return {
-      mainMenu: [
-        'Donna',
-        'Uomo',
-        'Bambini'
-      ]
+      headerNav,
+      headerMenu
     }
   }
 
@@ -23,7 +24,7 @@ export default {
       <!-- WEBSITE MENU -->
       <nav class="menu website">
         <ul>
-          <li v-for="(link, index) in mainMenu" :key="index"><a href="#">{{ link }}</a></li>
+          <li v-for="(link, index) in headerNav" :key="index"><a href="#">{{ link.text }}</a></li>
         </ul>
       </nav>
       <!-- /WEBSITE MENU -->
@@ -36,9 +37,11 @@ export default {
       
       <!-- USER MENU -->
       <div class="menu user">
-        <a href="#"><i class="fa-regular fa-user"></i></a>
-        <a href="#"><i class="fa-regular fa-heart"></i></a>
-        <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+        <ul>
+          <li v-for="(item, index) in headerMenu" :key="index">
+            <a href="#"><i :class="item.class"></i></a>
+          </li>
+        </ul>
       </div>
       <!-- /USER MENU -->
       
