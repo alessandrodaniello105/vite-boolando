@@ -78,6 +78,9 @@ header {
         padding-bottom: 5px;
       }
     }
+    .logo img {
+      vertical-align: middle;
+    }
     
   }
 }
